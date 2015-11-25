@@ -1,0 +1,77 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+
+Example:
+
+    <iron-input-image></iron-input-image>
+
+@group Seed Elements
+@element iron-image-uploader
+@demo demo/index.html
+@hero hero.svg
+-->
+
+<script>
+
+  Polymer({
+
+    is: 'iron-input-image',
+
+    extends: 'input',
+
+    hostAttributes: {
+      'type': 'file',
+      'accept': 'image/*'
+    },
+
+    properties: {
+      name: {
+        type: String,
+        value: '',
+        notify: true
+      },
+      size: {
+        type: Number,
+        value: 0,
+        notify: true
+      },
+      src: {
+        type: String,
+        value: '',
+        notify: true
+      }
+    },
+
+    listeners: {
+      'change': '_handleImage'
+    },
+
+    created: function() {
+      this.style.display = 'none';
+    },
+
+    choose: function() {
+      this.fire('click');
+    },
+
+    _handleImage: function() {
+      var fReader = new FileReader();
+      var file = this.files[0];
+      fReader.readAsDataURL(file);
+      this.name = file.name;
+      this.size = this._toKo(file.size);
+      fReader.onloadend = (function(self) { 
+        return function(e) { 
+          self.set('src', e.target.result);
+        }; 
+      })(this);
+    },
+
+    _toKo(size) {
+      return Math.round(size/1024);
+    }
+
+  });
+
+</script>
