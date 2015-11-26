@@ -26,7 +26,7 @@ Example:
     },
 
     properties: {
-      name: {
+      title: {
         type: String,
         value: '',
         notify: true
@@ -59,7 +59,7 @@ Example:
       var fReader = new FileReader();
       var file = this.files[0];
       fReader.readAsDataURL(file);
-      this.name = file.name;
+      this.title = file.name;
       this.size = this._toKo(file.size);
       fReader.onloadend = (function(self) { 
         return function(e) { 

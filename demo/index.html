@@ -26,16 +26,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           max-height: 400px;
         }
       </style>
-      <input id="inputImage" is="iron-input-image" src="{{src}}" name="{{name}}" size="{{size}}">
+      <input id="inputImage" is="iron-input-image" src="{{src}}" title="{{title}}" size="{{size}}">
       <img src="[[src]]">
-      <h2>[[name]]</h3>
+      <h2>[[title]]</h3>
       <h3>[[size]] ko</h3>
       <paper-button raised on-tap="selectImage">Select</paper-button>
     </template>
 
     <script>
     var scope = document.querySelector('#scope');
-    scope.name = 'No file selected'
+    scope.title = 'No file selected'
     scope.selectImage = function() {
       scope.$.inputImage.choose();
     }
