@@ -55,6 +55,12 @@ Example:
       this.fire('click');
     },
 
+    clear: function() {
+      this.value = null;
+      this.title = this.src = '';
+      this.size = 0;
+    },
+
     _handleImage: function() {
       var fReader = new FileReader();
       var file = this.files[0];

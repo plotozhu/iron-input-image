@@ -31,6 +31,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <h2>[[title]]</h3>
       <h3>[[size]] ko</h3>
       <paper-button raised on-tap="selectImage">Select</paper-button>
+      <paper-button raised on-tap="clearSelection">Clear</paper-button>
     </template>
 
     <script>
@@ -38,6 +39,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     scope.title = 'No file selected'
     scope.selectImage = function() {
       scope.$.inputImage.choose();
+    }
+    scope.clearSelection = function() {
+      scope.$.inputImage.clear();
     }
     </script>
 
