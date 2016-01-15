@@ -1,24 +1,24 @@
 {
-  "name": "iron-image-uploader",
-  "version": "1.0.3",
+  "name": "iron-input-image",
+  "version": "1.0.0",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Zecat <jullienfelix@gmail.com>"
   ],
-  "description": "An element providing a solution to no problem in particular.",
+  "description": "A convenient element to bind the informations of a selected image.",
   "keywords": [
     "web-component",
     "polymer",
     "seed"
   ],
-  "main": "iron-image-uploader.html",
+  "main": "iron-input-image.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/zecat>/iron-input-image/",
   "ignore": [
     "/.*",
     "/test/"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0"
+    "polymer": "Polymer/polymer#^1.2.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
